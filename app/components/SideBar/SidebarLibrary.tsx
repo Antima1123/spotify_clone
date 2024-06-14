@@ -68,11 +68,12 @@ const  SidebarLibrary = () => {
 
       </div>
       <div className=" flex flex-col gap-6">
-        {libcard.map((card)=>(
+        {libcard.map((card, index)=>(
             <Sidebarcard
             title={card.title}
             des={card.des}
             btn_name={card.btn_name}
+            key={index}
             />
         ))}
       </div>

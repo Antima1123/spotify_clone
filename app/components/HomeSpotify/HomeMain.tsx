@@ -110,8 +110,8 @@ const HomeMain = () => {
         <div className="gap-4 flex flex-col">
           <p className="text-2xl font-[700] hover:underline w-[16rem]">Try Something else</p>
           <div className=" flex gap-[1px] ">
-            {playlist.map((card)=>(
-              <HomeCards img_url={card.img_url} title={card.title} des={card.des}/>
+            {playlist.map((card, index)=>(
+              <HomeCards img_url={card.img_url} key={index} title={card.title} des={card.des}/>
             ))}
             
             </div>
@@ -119,7 +119,7 @@ const HomeMain = () => {
         }
         {
           songData.map((item, index)=>(
-            <CardPage serialNo={index+1} title={item.title} singer={item.singer} date={item.date} timestp={item.time}/>//h,m aarhe pani chal 2 sec
+            <CardPage serialNo={index+1} key={index} title={item.title} singer={item.singer} date={item.date} timestp={item.time}/>//h,m aarhe pani chal 2 sec
           ))
         }
      </div> 
